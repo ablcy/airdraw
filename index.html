@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>空中手势涂鸦 - Air Drawing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdmirror.com/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdmirror.com/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <video id="webcam" autoplay playsinline></video>
+    <canvas id="output_canvas"></canvas>
+    
+    <div class="controls">
+      <span class="guide-item">📷 双手拼框：局部彩色</span>
+      <span class="guide-item">✍️ 单手捏合：隔空涂鸦</span>
+      <span class="guide-item">🧹 五指并拢：手掌橡皮擦</span>
+    </div>
+    
+    <div class="loading" id="loading">正在加载手势识别 AI 模型，请稍候...</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
